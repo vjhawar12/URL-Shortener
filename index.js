@@ -14,6 +14,10 @@ const headers = {
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended : true})); 
 
+app.use((req, res, next) => {
+    res.status(404).send("Number of links-classic exceeded"); 
+}); 
+
 app.get("/", (req, res) => {
     res.render("index.ejs"); 
 }); 
