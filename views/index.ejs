@@ -29,22 +29,15 @@
 						<i class="zmdi zmdi-font"></i>
 					</span>
 
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="link">
-						<span class="focus-input100" data-placeholder="Enter URL"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input">
-						<span class="btn-show-pass">
-							
-						</span>
-						<input class="input100" type="text" name="pass">
-                        <% if (!locals.shortURL) { %>
-						    <span class="focus-input100" data-placeholder="Short URL"> </span>
-                        <% } else { %>
-                            <span class="focus-input100" data-placeholder=<%= shortURL %>> </span>
-                        <% } %>
-					</div>
+                    <label for="link"> Enter URL: </label>
+                    <input type="text" id="link" name="link"><br><br>
+                    <label for="lname"> Shortened URL: </label>
+                    <% if (!locals.shortURL) { %>
+                        <input type="text" id="shortURL" name="shortURL"><br><br>
+                    <% } else { %>
+						<p> <%= shortURL %> </p> <br><br>
+                        <!-- <input type="text" id="shortURL" name="shortURL" placeholder=<%= shortURL %>><br><br> -->
+                    <% } %>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
@@ -59,12 +52,8 @@
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
-							Don’t have an account?
+							Made using Rebrand.ly
 						</span>
-
-						<a class="txt2" href="#">
-							Sign Up
-						</a>
 					</div>
 				</form>
 			</div>
